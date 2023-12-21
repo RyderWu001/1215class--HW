@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+    </style>
+</head>
+<body>
+
+    <script>
+        var ans = Math.floor(Math.random() * 10) + 1;
+        var tip;
+        var down = 0;
+        var up = 10;
+    
+        while (true) {
+            var input = window.prompt("請輸入從" + down + "到" + up + "的數");
+    
+            // Check if the input is a number
+            if (isNaN(input)) {
+                alert("請輸入有效的數字！");
+                continue; // Restart the loop
+            }
+    
+            var a = parseInt(input);
+    
+            if (a > ans) {
+                up = a;
+            } else if (a < ans) {
+                down = a;
+            } else if (a === ans) {
+                alert("你答對了！！！");
+                break;
+            }
+        }
+    </script>
+    
+
+    <header>
+        <h1>Number Guess</h1>
+    </header>
+
+    <footer>
+        <p>112306041吳育來</p>
+    </footer>
+
+</body>
+</html>
